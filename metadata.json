@@ -1,0 +1,5 @@
+{
+  "name": "Quick Converter",
+  "description": "A high-performance, aesthetically pleasing currency converter specialized for the CNY-MYR corridor, featuring real-time rates and historical comparisons.",
+  "requestFramePermissions": []
+}
