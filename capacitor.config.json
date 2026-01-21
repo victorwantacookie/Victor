@@ -1,0 +1,26 @@
+
+{
+  "appId": "com.quickconv.app",
+  "appName": "Quick Converter",
+  "webDir": ".",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true,
+    "allowNavigation": ["hexarate.paikama.co", "api.frankfurter.app"]
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 3000,
+      "backgroundColor": "#2563eb",
+      "showSpinner": true,
+      "androidScaleType": "CENTER_CROP",
+      "splashFullScreen": true,
+      "splashImmersive": true
+    },
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "#2563eb"
+    }
+  }
+}

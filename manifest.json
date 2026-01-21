@@ -1,25 +1,41 @@
 
 {
+  "id": "com.quickconv.app",
   "short_name": "QuickConv",
-  "name": "Quick Converter: CNY-MYR",
-  "description": "Fast and clean CNY to MYR currency converter.",
+  "name": "Quick Converter",
+  "description": "Fast CNY-MYR currency converter with real-time rates.",
+  "categories": ["finance", "utilities"],
   "icons": [
     {
       "src": "https://cdn-icons-png.flaticon.com/512/2654/2654518.png",
       "type": "image/png",
       "sizes": "192x192",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2654/2654518.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
     },
     {
       "src": "https://cdn-icons-png.flaticon.com/512/2654/2654518.png",
       "type": "image/png",
       "sizes": "512x512",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2654/2654518.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
     }
   ],
   "start_url": ".",
+  "scope": "/",
   "display": "standalone",
   "theme_color": "#2563eb",
   "background_color": "#f1f5f9",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "lang": "en-US"
 }

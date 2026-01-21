@@ -3,21 +3,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
-// Register Service Worker for PWA functionality
+// Register Service Worker for PWA/APK reliability
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    // Constructing the URL explicitly to ensure it matches the current origin
-    // in sandboxed or proxied environments.
-    const swUrl = new URL('./sw.js', window.location.href).href;
-    
-    navigator.serviceWorker.register(swUrl)
+    navigator.serviceWorker.register('./sw.js')
       .then((registration) => {
-        console.log('ServiceWorker registered with scope:', registration.scope);
+        console.log('App ready for offline/native use');
       })
       .catch((err) => {
-        // In some development sandboxes, Service Workers are restricted.
-        // We log it as a warning rather than a full error to avoid cluttering the UI.
-        console.warn('ServiceWorker registration skipped or failed. This is expected in some development environments.', err);
+        console.warn('SW failed, app will still work online.', err);
       });
   });
 }

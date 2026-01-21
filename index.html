@@ -3,13 +3,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content" />
     <meta name="theme-color" content="#2563eb" />
+    
+    <!-- Android/PWA Tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="Quick Converter" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="application-name" content="QuickConv" />
+    
     <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/2654/2654518.png" />
     <link rel="manifest" href="manifest.json" />
+    
     <title>Quick Converter</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -19,6 +24,11 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #f1f5f9;
             -webkit-tap-highlight-color: transparent;
+            user-select: none;
+            padding-top: env(safe-area-inset-top);
+            padding-bottom: env(safe-area-inset-bottom);
+            overflow: hidden; /* Prevent bouncing on mobile */
+            height: 100vh;
         }
 
         .glass-panel {
@@ -31,6 +41,10 @@
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
         }
 
+        input {
+            user-select: auto !important;
+        }
+
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
             -webkit-appearance: none;
@@ -38,6 +52,11 @@
         }
         input[type=number] {
             -moz-appearance: textfield;
+        }
+
+        /* Hide scrollbars for a clean app look */
+        ::-webkit-scrollbar {
+            display: none;
         }
     </style>
 <script type="importmap">
@@ -53,5 +72,6 @@
 </head>
 <body>
     <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
 </body>
 </html>
