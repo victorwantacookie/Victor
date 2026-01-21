@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Quick Converter" />
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/2654/2654518.png" />
+    <link rel="manifest" href="manifest.json" />
     <title>Quick Converter</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -25,7 +31,6 @@
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
         }
 
-        /* Hide number input spinners */
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
             -webkit-appearance: none;
@@ -33,16 +38,6 @@
         }
         input[type=number] {
             -moz-appearance: textfield;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-            100% { transform: translateY(0px); }
-        }
-
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
         }
     </style>
 <script type="importmap">
